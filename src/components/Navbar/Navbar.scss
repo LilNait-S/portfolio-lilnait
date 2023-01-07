@@ -1,0 +1,195 @@
+
+
+.app__navbar {
+  margin: 0px auto;
+  width: 100%;
+  
+ 
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  
+  position: fixed;
+  z-index: 2;
+}
+
+.app__navbar-logo {
+  // display: flex;
+  // justify-content: flex-start;
+  // align-items: center;
+
+  img {
+    width: 110px;
+    height: 44px;
+
+    @media screen and (min-width: 2000px) {
+      width: 180px;
+      height: 40px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1; // flex:1 = {
+  //
+  // flex-grow : 1;    ➜ El div crecerá en la misma proporción que el tamaño de la ventana
+  // flex-shrink : 1;  ➜ El div se reducirá en la misma proporción que el tamaño de la ventana
+  // flex-basis : 0;   ➜ El div no tiene un valor inicial como tal y hace que
+  //                      ocupe la pantalla según el tamaño de pantalla disponible
+  //                      por ejemplo: si hay 3 divs en el envoltorio, cada div ocupará el 33 %.
+  // }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 9px;
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+
+    flex-direction: column;
+
+    div {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: var(--darkwhite-color);
+      text-decoration: none;
+      flex-direction: column;
+
+      font-size: 1rem;
+      font-weight: 500;
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--lightpurple-color);
+      }
+    }
+
+    &:hover {
+      div {
+        background: var(--lightpurple-color);
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 80%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    // background: -webkit-radial-gradient(
+    //   600px 700px,
+    //   circle farthest-side,
+    //   var(--purple-color),
+    //   var(--black-color)
+
+    // );
+    background: radial-gradient(
+      farthest-side circle at 20px 30px,
+      #1e0444,
+      #101118
+    );
+
+    /* top box shadow */
+    box-shadow: -20px 0px 20px rgba(11, 11, 11, 0.496);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: var(--white-color);
+      margin: 0.5rem 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: var(--lightpurple-color);
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: var(--white-color);
+          text-decoration: none;
+          font-size: 1.1rem;
+
+          font-weight: 500;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--lightpurple-color);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
