@@ -9,19 +9,20 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-top: 5rem;
-  padding: 2rem 0rem;
-  gap: 50px;
+  margin: 2rem 0rem;
+  padding: 5rem 0rem;
+  gap: 100px;
 }
 
 .app__profile-item {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
 
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 2rem;
+  
  
   position: relative;
 
@@ -46,7 +47,7 @@
       margin-bottom: 20px;
       color: var(--black-color);
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 541px) {
     
         top: -65px;
         padding: 1rem 1.5rem 2rem;

@@ -38,10 +38,10 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
+      <h2 className="head-text"><span>Proyectos y trabajos</span> entregados</h2>
 
       <div className="app__work-filter">
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {['UI/UX', 'Web App', 'Next JS', 'React', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -95,10 +95,10 @@ const Work = () => {
 
             <div className="app__work-content app__flex">
               <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
+              <p className="p-text-color-lightblack" style={{ marginTop: 10 }}>{work.description}</p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text-color-purple">{work.tags[0]}</p>
               </div>
             </div>
           </div>
@@ -108,4 +108,10 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, 'Trabajo');
+
+export default AppWrap(
+  MotionWrap(Work, "app__works"),
+  "Trabajo",
+  "app__whitebg"
+);
+

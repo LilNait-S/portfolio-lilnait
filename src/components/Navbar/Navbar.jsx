@@ -3,7 +3,6 @@ import { HiX } from "react-icons/hi";
 import { BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
 
-import { AppWarp } from '../../wrapper'
 import { images } from "../../constants";
 import "./Navbar.scss";
 
@@ -20,7 +19,7 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         {navigation.map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+          <li className="app__flex p-text-nav" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>

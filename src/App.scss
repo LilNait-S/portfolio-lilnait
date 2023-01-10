@@ -1,14 +1,18 @@
 .app {
   background: radial-gradient(
     farthest-side circle at 20px 30px,
-    #1e0444,
-    #101118
+    var(--bg-purple),
+    var(--bg-darkpurple)
   );
   color: var(--darkwhite-color);
 }
 
 .app__whitebg {
-  background-color: var(--white-color);
+  background: radial-gradient(
+    farthest-side circle at 20px 30px,
+    var(--bg-purple),
+    var(--bg-darkpurple)
+  );
 }
 
 .app__primarybg {
@@ -17,7 +21,7 @@
 
 .app__container {
   width: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
 
   display: flex;
   flex-direction: row;
@@ -33,7 +37,8 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
-  padding: 4rem 2rem;
+  margin: 2rem 0rem;
+  padding: 2rem 2rem;
 
   @media screen and (max-width: 450px) {
     padding: 4rem 1rem 2rem;
@@ -69,25 +74,79 @@
     font-size: 4rem;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 541px) {
     font-size: 2rem;
   }
 }
 
-.p-text {
+.p-text-nav {
   font-size: 0.9rem;
   text-align: left;
   color: var(--white-color);
   line-height: 1.5;
-  padding: 0rem 2rem;
+  
 
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
   }
 
-  @media screen and (max-width: 400px) {
-    padding: 0rem 1rem;
+ 
+}
+
+.p-text-exp {
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--white-color);
+  line-height: 1.5;
+  
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
   }
+
+ 
+}
+
+.p-text-skills {
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--white-color);
+  line-height: 1.5;
+  
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+
+  
+}
+
+.p-text-color-purple {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: left;
+  color: var(--lightpurple-color);
+  line-height: 1.5;
+  padding: 0rem 1.5rem;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+
+}
+
+.p-text-color-lightblack {
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--darkblack-color);
+  line-height: 1.5;
+ 
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+
+
 }
 
 .bold-text {
@@ -105,15 +164,30 @@
   }
 }
 
+.bold-text-white {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--white-color);
+  text-align: left;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
 .app__social {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-
+  cursor: pointer;
   padding: 1rem;
 
-  div {
+  a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -184,7 +258,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .app__navigation,
   .app__social {
     display: none;

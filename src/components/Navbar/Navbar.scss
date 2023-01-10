@@ -1,7 +1,5 @@
-
-
 .app__navbar {
-  margin: 0px auto;
+  
   width: 100%;
   
  
@@ -48,9 +46,10 @@
   align-items: center;
   padding-bottom: 9px;
   list-style: none;
+  gap: 50px;
 
   li {
-    margin: 0 1rem;
+    
     cursor: pointer;
 
     flex-direction: column;
