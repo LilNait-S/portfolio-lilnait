@@ -65,15 +65,16 @@ const Skills = () => {
                       key={work._key}
                     >
                       <h4 className="bold-text-white">{work.name}</h4>
-                      <p className="p-text-exp">{work.company}</p>
+                      <p className="p-text-color-purple">{work.company}</p>
+                      <p className="p-text-exp">{work.desc}</p>
                     </motion.div>
-                    <Tooltip
+                    {/* <Tooltip
                       anchorId={work.name}
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
                       {work.desc}
-                    </Tooltip>
+                    </Tooltip> */}
                   </div>
                 ))}
               </motion.div>

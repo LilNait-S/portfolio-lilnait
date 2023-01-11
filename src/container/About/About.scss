@@ -47,11 +47,17 @@
       margin-bottom: 20px;
       color: var(--black-color);
     }
-    @media screen and (max-width: 541px) {
+    @media screen and (max-width: 420px) {
     
-        top: -65px;
+        top: -30px;
         padding: 1rem 1.5rem 2rem;
     }
+
+    @media screen and (max-width: 340px) {
+    
+      top: -45px;
+      padding: 1rem 1.5rem 2rem;
+  }
   }
 
 
@@ -66,4 +72,10 @@
   @media screen and (min-width: 2000px) {
     margin: 2rem 4rem;
   }
+
+  @media screen and (max-width: 420px) {
+    
+    
+    padding: 1rem;
+}
 }
