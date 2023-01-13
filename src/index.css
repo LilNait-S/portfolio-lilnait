@@ -11,12 +11,12 @@
 :root {
   --font-base: "Space grotesk", sans-serif;
 
-  --darkwhite-color: #f2fbfd;
+  --darkwhite-color: #e3edef;
   --darkblack-color: #363848;
   --purple-color: #4506A1;
   --lightpurple-color: #9D5AFF;
   --orange-color: #ff5e49;
-  --white-color: #ffffff;
+  --white-color: #dcdcdc;
   --black-color: #101118;
 
   --bg-purple:#1E0444;

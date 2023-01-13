@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Tooltip } from "react-tooltip";
-import 'react-tooltip/dist/react-tooltip.css'
+import "react-tooltip/dist/react-tooltip.css";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -10,7 +10,6 @@ import "./Skills.scss";
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
-
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
@@ -25,12 +24,16 @@ const Skills = () => {
     });
   }, []);
 
-  const sortedExperiences = experiences.slice().sort((a, b) => a.year - b.year);
-  const sortedSkills = skills.slice().sort((a, b) => a.name.localeCompare(b.name));
+  const sortedExperiences = experiences.slice().sort((a, b) => b.year - a.year);
+  const sortedSkills = skills
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <>
-      <h2 className="head-text">Habilidades y <span>Experiencias</span></h2>
+      <h2 className="head-text">
+        Habilidades y <span>Experiencias</span>
+      </h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -68,20 +71,11 @@ const Skills = () => {
                       <p className="p-text-color-purple">{work.company}</p>
                       <p className="p-text-exp">{work.desc}</p>
                     </motion.div>
-                    {/* <Tooltip
-                      anchorId={work.name}
-                      arrowColor="#fff"
-                      className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </Tooltip> */}
                   </div>
                 ))}
               </motion.div>
             </motion.div>
           ))}
-
-
         </div>
       </div>
     </>
@@ -93,4 +87,3 @@ export default AppWrap(
   "Habilidades",
   "app__whitebg"
 );
-

@@ -1,7 +1,10 @@
 import React from "react";
-import { BsInstagram } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
+
+
+
 
 const SocialMedia = () => {
   return (
@@ -15,20 +18,20 @@ const SocialMedia = () => {
         <IoLogoWhatsapp />
       </a>
       <a
-        href="https://www.instagram.com/lilnait.dev/"
+        href="https://github.com/LilNait-S"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Encuentrame en Instagram"
+        aria-label="Encuentrame en github"
       >
-        <BsInstagram />
+        <BsGithub />
       </a>
       <a
-        href="https://www.tiktok.com/@lilnait.dev"
+        href="www.linkedin.com/in/sergio-delgado-arenas"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Encuentrame en Tiktok"
+        aria-label="Encuentrame en linkedin"
       >
-        <FaTiktok />
+        <BsLinkedin />
       </a>
     </div>
   );
